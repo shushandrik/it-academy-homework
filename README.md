@@ -1,1 +1,1 @@
-# it-academy-homework
+Andrei Shushkevich`s homework

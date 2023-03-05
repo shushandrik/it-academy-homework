@@ -49,8 +49,5 @@
   }
 
 };
-add(1,11)
-console.log (add)
-
 
 module.exports = Calculator;

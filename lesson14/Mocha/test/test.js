@@ -145,14 +145,3 @@ describe ('Exponentiation function test', function () {
 
 
 
-/*
-const {expect} = require('chai');
-const {returnTrue} = require ('../../func')
-
-describe ('First test', function (){
-    it ('Title that will be included in the report', async () => {
-        const functionResult = returnTrue ();
-        expect (functionResult).to.equal(false)
-    } )
-})
-*/

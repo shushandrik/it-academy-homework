@@ -1,0 +1,22 @@
+{
+  "name": "mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha",
+    "lint": "eslint --debug ./ --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "eslint": "^8.35.0",
+    "mocha": "^10.2.0"
+  },
+  "devDependencies": {
+    "eslint-config-recommended": "^4.1.0",
+    "eslint-plugin-chai": "^0.0.1"
+  }
+}

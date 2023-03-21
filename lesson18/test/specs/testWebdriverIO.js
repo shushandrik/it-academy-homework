@@ -25,5 +25,5 @@ describe('My homework for webdriver.io testing', () => {
         await $(`.lightToggleIcon_pyhR`).click();
         const darkMode = await $(`//button[@class='clean-btn toggleButton_gllP']`);
         expect (await (darkMode).getText()).toHaveTextContaining('ufsfgsgsbdgt');
-    }) */ // ?????Почему тест при любых значениях проходит без ошибки??????
+    }) */// ?????Почему тест при любых значениях toHaveTextContaining проходит без ошибки??????
 });

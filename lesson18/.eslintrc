@@ -1,4 +1,5 @@
 {
+    "plugins": ["wdio"],
     "extends": [
         "airbnb/base",
         "plugin:wdio/recommended"

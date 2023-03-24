@@ -21,9 +21,17 @@ describe('My homework for webdriver.io testing', () => {
     await expect(browser).toHaveUrl('https://github.com/webdriverio/webdriverio');
   });
 
-  /* it ('should be enabled night mode', async () => {
-        await $(`.lightToggleIcon_pyhR`).click();
-        const darkMode = await $(`//button[@class='clean-btn toggleButton_gllP']`);
-        expect (await (darkMode).getText()).toHaveTextContaining('ufsfgsgsbdgt');
-    }) */// ?????Почему тест при любых значениях toHaveTextContaining проходит без ошибки??????
+  it('should be enabled night mode', async () => {
+    await $('.lightToggleIcon_pyhR').click();
+    const darkMode = await $('.clean-btn.toggleButton_gllP');
+    await expect(await (darkMode).getText()).toHaveTextContaining('ufsfghhhhhhhhbdgt');
+  });
 });
+
+/*  Не могу завершить последний тест. Приходит undefined. Подскажи, пожалуйста, в чем ошибка. Пробовал менять локатор на //*[contains(@title, "Switch between")]
+
+Expect  to have text containing
+
+Expected: "ufsfghhhhhhhhbdgt"
+Received: undefined
+*/

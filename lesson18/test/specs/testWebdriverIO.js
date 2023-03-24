@@ -24,7 +24,7 @@ describe('My homework for webdriver.io testing', () => {
   it('should be enabled night mode', async () => {
     await $('.lightToggleIcon_pyhR').click();
     const darkMode = await $('.clean-btn.toggleButton_gllP');
-    await expect(await (darkMode).getText()).toHaveTextContaining('ufsfghhhhhhhhbdgt');
+    await expect(await (darkMode).getText()).toHaveTextContaining('currently dark mode');
   });
 });
 

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 20000"
+    "test": "mocha --timeout 20000",
+    "lint": "eslint ./test",
+    "lint:fix": "eslint ./test --fix"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +15,9 @@
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
     "selenium-webdriver": "^4.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb": "^19.0.4"
   }
 }

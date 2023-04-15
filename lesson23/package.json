@@ -1,0 +1,18 @@
+{
+  "name": "lesson23",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./tests ./page-objects",
+    "lint:fix": "eslint ./tests ./page-objects --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.32.3",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb": "^19.0.4"
+  }
+}

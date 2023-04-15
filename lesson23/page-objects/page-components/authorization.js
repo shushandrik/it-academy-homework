@@ -25,9 +25,10 @@ class Autorization {
     this.enterConfirmationPassword = page.locator = ("//div[@class='_content_1ekkp_13']//input[@name='password_confirmation']");
     this.subscribeNews = page.locator = ("//div[@class='x-checkbox x-checkbox_alignment_center _checkboxMargin_1cc0m_7 _checkbox_1cc0m_7']//span");
     this.agreementPersonslData = page.locator = ("//div[@class='x-checkbox x-checkbox_alignment_center _root_g83ar_2 _inputMargin_1cc0m_44 _policyAgreement_1cc0m_16']//span");
+    this.regisrationButton = page.locator = ('._footer_1cc0m_56 button');
   }
 
-  async loginWithCredentials(email, password) {
+  async doLoginWithCredentials(email, password) {
     await this.login.click();
     await this.numberOrEmailInput.click();
     await this.numberOrEmailInput.fill(email);
@@ -37,32 +38,27 @@ class Autorization {
     await this.entrance.click();
   }
 
-  async passwordRecovery(email) {
+  async doPasswordRecovery(email) {
     await this.login.click();
     await this.forgotPassword.click();
     await this.entryYourEmail.click();
     await this.entryYourEmail.fill(email);
   }
 
-  async quickVkLogin() {
-    await this.login.click();
-    await this.vkButton.click();
-  }
 
-  async registrationNewUser() {
+  async doRegistrationNewUser() {
     await this.login.click();
     await this.register.click();
     await this.enterYourName.fill('Андрей');
-    // await this.page.keyboard.press('Tab');
+    await this.page.keyboard.press('Tab');
     await this.enterYourEmail.fill('400500@tut.by');
-    // await this.page.keyboard.press('Tab');
     await this.page.keyboard.press('Tab');
-    // await this.enterYourPhoneNumber.fill('296214833')
+    await this.page.keyboard.type('296214833');
     await this.page.keyboard.press('Tab');
-    await this.enterPassword.fill('QweQ123456');
+    await this.page.keyboard.type('QweQ123456');
     await this.page.keyboard.press('Tab');
-    await this.enterConfirmationPassword.fill('QweQ123456');
-    // await this.page.keyboard.press('Tab');
+    await this.page.keyboard.type('QweQ123456');
+    await this.page.check(this.agreementPersonslData);
   }
 }
 module.exports = Autorization;

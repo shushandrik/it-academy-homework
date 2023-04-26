@@ -1,0 +1,854 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "meta": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "es_took": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "version",
+          "es_took"
+        ]
+      },
+      "autocomplete": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "state": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "geo_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "state",
+              "state_code",
+              "country",
+              "centroid",
+              "slug_id",
+              "geo_id"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "counties": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  }
+                ]
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "geo_id": {
+                "type": "string"
+              },
+              "county_needed_for_uniq": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "city",
+              "state_code",
+              "counties",
+              "country",
+              "centroid",
+              "slug_id",
+              "geo_id",
+              "county_needed_for_uniq"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "counties": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  }
+                ]
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "geo_id": {
+                "type": "string"
+              },
+              "county_needed_for_uniq": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "city",
+              "state_code",
+              "counties",
+              "country",
+              "centroid",
+              "slug_id",
+              "geo_id",
+              "county_needed_for_uniq"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "counties": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  }
+                ]
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "geo_id": {
+                "type": "string"
+              },
+              "county_needed_for_uniq": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "city",
+              "state_code",
+              "counties",
+              "country",
+              "centroid",
+              "slug_id",
+              "geo_id",
+              "county_needed_for_uniq"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "counties": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "fips": {
+                        "type": "string"
+                      },
+                      "state_code": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "fips",
+                      "state_code"
+                    ]
+                  }
+                ]
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "geo_id": {
+                "type": "string"
+              },
+              "county_needed_for_uniq": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "city",
+              "state_code",
+              "counties",
+              "country",
+              "centroid",
+              "slug_id",
+              "geo_id",
+              "county_needed_for_uniq"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "school_id": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "line": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "postal_code": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "has_catchment": {
+                "type": "boolean"
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "city_slug_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "school_id",
+              "school",
+              "line",
+              "city",
+              "postal_code",
+              "state_code",
+              "country",
+              "centroid",
+              "has_catchment",
+              "slug_id",
+              "city_slug_id"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "school_id": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "line": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "postal_code": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "has_catchment": {
+                "type": "boolean"
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "city_slug_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "school_id",
+              "school",
+              "line",
+              "city",
+              "postal_code",
+              "state_code",
+              "country",
+              "centroid",
+              "has_catchment",
+              "slug_id",
+              "city_slug_id"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "school_id": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "line": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "postal_code": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "has_catchment": {
+                "type": "boolean"
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "city_slug_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "school_id",
+              "school",
+              "line",
+              "city",
+              "postal_code",
+              "state_code",
+              "country",
+              "centroid",
+              "has_catchment",
+              "slug_id",
+              "city_slug_id"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "county": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "geo_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "county",
+              "state_code",
+              "country",
+              "centroid",
+              "slug_id",
+              "geo_id"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "area_type": {
+                "type": "string"
+              },
+              "_id": {
+                "type": "string"
+              },
+              "_score": {
+                "type": "number"
+              },
+              "school_id": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "line": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "postal_code": {
+                "type": "string"
+              },
+              "state_code": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "centroid": {
+                "type": "object",
+                "properties": {
+                  "lon": {
+                    "type": "number"
+                  },
+                  "lat": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "lon",
+                  "lat"
+                ]
+              },
+              "has_catchment": {
+                "type": "boolean"
+              },
+              "slug_id": {
+                "type": "string"
+              },
+              "city_slug_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "area_type",
+              "_id",
+              "_score",
+              "school_id",
+              "school",
+              "line",
+              "city",
+              "postal_code",
+              "state_code",
+              "country",
+              "centroid",
+              "has_catchment",
+              "slug_id",
+              "city_slug_id"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "meta",
+      "autocomplete"
+    ]
+  }
+  
+  
